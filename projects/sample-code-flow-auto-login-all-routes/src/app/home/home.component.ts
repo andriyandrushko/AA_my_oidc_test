@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { OidcSecurityService, UserDataResult } from 'angular-auth-oidc-client';
 import { Observable } from 'rxjs';
+import { UserDataResult } from '../../../../angular-auth-oidc-client/src/lib/angular-auth-oidc-client';
+import { OidcSecurityService } from '../../../../angular-auth-oidc-client/src/lib/oidc.security.service';
 
 @Component({
   selector: 'app-home',

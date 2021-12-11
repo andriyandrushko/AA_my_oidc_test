@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { AuthModule, LogLevel } from 'angular-auth-oidc-client';
+import { LogLevel } from '../../../angular-auth-oidc-client/src/lib/angular-auth-oidc-client';
+import { AuthModule } from '../../../angular-auth-oidc-client/src/lib/auth.module';
 
 @NgModule({
   imports: [
@@ -9,15 +10,16 @@ import { AuthModule, LogLevel } from 'angular-auth-oidc-client';
         forbiddenRoute: '/forbidden',
         unauthorizedRoute: '/unauthorized',
         logLevel: LogLevel.Debug,
-        historyCleanupOff: true,
-        authority: 'https://offeringsolutions-sts.azurewebsites.net',
+        historyCleanupOff: false,
+        //authority: 'https://localhost:44318',
+        authority: 'https://demo.identityserver.io/',
         redirectUrl: window.location.origin,
         postLogoutRedirectUri: window.location.origin,
-        clientId: 'angularCodeRefreshTokens',
+        clientId: 'interactive.public',
         scope: 'openid profile email offline_access',
         responseType: 'code',
         silentRenew: true,
-        useRefreshToken: true,
+        useRefreshToken: true
       },
     }),
   ],

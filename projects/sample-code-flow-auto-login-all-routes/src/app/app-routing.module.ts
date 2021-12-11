@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AutoLoginAllRoutesGuard } from 'angular-auth-oidc-client';
+import { AutoLoginAllRoutesGuard } from '../../../angular-auth-oidc-client/src/lib/angular-auth-oidc-client';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { HomeComponent } from './home/home.component';
 import { ProtectedComponent } from './protected/protected.component';
